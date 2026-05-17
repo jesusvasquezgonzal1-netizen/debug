@@ -5,8 +5,6 @@ public class ScentedCandle extends Candle {
     public ScentedCandle(String color, double height, String scent) {
         super(color, height);
         this.scent = scent;
-        // Override the price to $3 per inch for scented candles
-        setHeight(height);
     }
     
     // Getter for scent
@@ -19,14 +17,16 @@ public class ScentedCandle extends Candle {
         this.scent = scent;
     }
     
-    // Override setHeight to set price at $3 per inch
+    // Override setHeight to set price at $3 per inch for scented candles
     @Override
     public void setHeight(double height) {
-        super.setHeight(height);
-        // Override the price calculation from parent class
-        // Access price through reflection or recalculate here
-        // Since price is private in parent, we need to recalculate
-        double scentedPrice = height * 3; // $3 per inch
-        // We'll handle this by creating a workaround
+        this.height = height;
+        calculatePrice();
+    }
+    
+    // Override calculatePrice to charge $3 per inch for scented candles
+    @Override
+    protected void calculatePrice() {
+        this.price = height * 3; // $3 per inch
     }
 }
