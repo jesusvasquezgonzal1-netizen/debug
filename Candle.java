@@ -1,10 +1,10 @@
 public class Candle {
     protected String color;
-    protected double height;
+    protected int height;
     protected double price;
     
     // Constructor
-    public Candle(String color, double height) {
+    public Candle(String color, int height) {
         this.color = color;
         this.height = height;
         calculatePrice();
@@ -21,12 +21,12 @@ public class Candle {
     }
     
     // Getter for height
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
     
     // Setter for height - also updates price
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
         calculatePrice();
     }
