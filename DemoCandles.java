@@ -9,8 +9,7 @@ public class DemoCandles {
         String candleColor = input.nextLine();
         
         System.out.print("Enter a height in a whole number of inches >> ");
-        double candleHeight = input.nextDouble();
-        input.nextLine(); // Consume newline
+        int candleHeight = Integer.parseInt(input.nextLine());
         
         Candle candle = new Candle(candleColor, candleHeight);
         
@@ -19,8 +18,7 @@ public class DemoCandles {
         String scentedColor = input.nextLine();
         
         System.out.print("Enter a height in a whole number of inches >> ");
-        double scentedHeight = input.nextDouble();
-        input.nextLine(); // Consume newline
+        int scentedHeight = Integer.parseInt(input.nextLine());
         
         System.out.print("Enter a scent. Choose from the following:\n");
         System.out.print("gardenia, beach, pine, carnation     >> ");
